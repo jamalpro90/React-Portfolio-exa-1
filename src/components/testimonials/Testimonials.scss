@@ -1,0 +1,128 @@
+@import '../../Global.scss';
+
+.testimonials {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    justify-content: space-evenly;
+  }
+
+  h2 {
+    margin-top: 20px;
+    font-size: 50px;
+
+    @include mobile {
+      font-size: 30px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card {
+      width: 250px;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      box-shadow: 0 0 15px -8px black;
+      justify-content: space-around;
+      padding: 20px;
+      transition: all 0.7s ease;
+
+      @include mobile {
+        height: 150px;
+        border-radius: 10px;
+        margin: 2px 0;
+      }
+
+      &.featured {
+        width: 300px;
+        height: 75%;
+        margin: 0 40px;
+
+        @include mobile {
+          width: 250px;
+          height: 180px;
+          margin: 1px;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          &.left,
+          &.right {
+            height: 25px;
+          }
+          &.user {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 30px;
+
+            @include mobile {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+
+      .center {
+        padding: 10px;
+        background-color: rgb(240, 240, 240);
+        border-radius: 10px;
+
+        @include mobile {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+          margin-bottom: 5px;
+          @include mobile {
+            font-size: 14px;
+          }
+        }
+
+        h4 {
+          color: #888;
+          @include mobile {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
